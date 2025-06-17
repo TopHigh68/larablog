@@ -23,7 +23,8 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
                     <a href="/" class="text-lg font-bold text-gray-900 dark:text-white">
-                        {{ config('app.name', 'Laravel') }}
+                        {{-- {{ config('app.name', 'Mon Blog') }} --}}
+                        Mon Blog
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-6">
@@ -31,11 +32,11 @@
                         @if (Route::has('login'))
                         <nav class="flex items-center gap-4">
                             @auth
-                            <a href="{{ url('/dashboard') }}" class="text-sm hover:underline">Dashboard</a>
+                            <a href="{{ url('/dashboard') }}" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Dashboard</a>
                             @else
-                            <a href="{{ route('login') }}" class="text-sm hover:underline">Connexion</a>
+                            <a href="{{ route('login') }}" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Connexion</a>
                             @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="text-sm hover:underline">Inscription</a>
+                            <a href="{{ route('register') }}" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Inscription</a>
                             @endif
                             @endauth
                         </nav>
@@ -65,29 +66,15 @@
     <section class="px-6 py-16 text-center bg-white dark:bg-[#131313] border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-3xl mx-auto">
             <h1 class="text-4xl font-bold mb-4">Bienvenue sur <span class="text-blue-600">MonBlog</span></h1>
-            <p class="text-lg text-gray-600 dark:text-gray-400">Lisez, découvrez et suivez les histoires de nos auteurs
-                passionnés.</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400">{{-- Lisez, découvrez et suivez les histoires de nos auteurs
+                passionnés. --}} Découvrez les articles qui ont été ajouter par nos auteurs</p>
         </div>
     </section>
 
+    
     <!-- Derniers articles -->
     <section class="px-6 py-12 bg-gray-50 dark:bg-[#0a0a0a] flex-1">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl font-semibold mb-8 text-center">Derniers articles</h2>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                @foreach (range(1, 6) as $i)
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                    <div class="h-40 bg-gray-200 dark:bg-gray-700"></div> <!-- Placeholder image -->
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Titre de l'article {{ $i }}</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">Un aperçu rapide de l'article pour donner
-                            envie de lire plus...</p>
-                        <a href="#" class="inline-block mt-3 text-sm text-blue-600 hover:underline">Lire plus</a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
+        <p>Cette Partie n'est pas encore implémenté</p>
     </section>
 
     <!-- Footer -->

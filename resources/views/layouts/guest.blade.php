@@ -24,13 +24,14 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
                     <a href="/" class="text-lg font-bold text-gray-900 dark:text-white">
-                        {{ config('app.name', 'Laravel') }}
+                        {{-- {{ config('app.name', 'Laravel') }} --}}
+                        Mon Blog
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-6">
                     <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Accueil</a>
-                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">À propos</a>
-                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Contact</a>
+                    {{-- <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">À propos</a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-500">Contact</a> --}}
                 </nav>
                 <!-- Menu mobile -->
                 <div class="md:hidden">
@@ -45,15 +46,15 @@
         </div>
         <!-- Menu mobile dropdown -->
         <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-            <a href="#" class="block py-2 text-gray-700 dark:text-gray-300">Accueil</a>
-            <a href="#" class="block py-2 text-gray-700 dark:text-gray-300">À propos</a>
-            <a href="#" class="block py-2 text-gray-700 dark:text-gray-300">Contact</a>
+            <a href="/" class="block py-2 text-gray-700 dark:text-gray-300">Accueil</a>
+            {{-- <a href="#" class="block py-2 text-gray-700 dark:text-gray-300">À propos</a>
+            <a href="#" class="block py-2 text-gray-700 dark:text-gray-300">Contact</a> --}}
         </div>
     </header>
 
     <!-- Contenu principal -->
     <main class="py-10 px-4 sm:px-6 my-[7.2em] lg:px-8">
-        <div class="max-w-3xl  mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <div class="mx-auto ">
             {{ $slot }}
         </div>
     </main>
